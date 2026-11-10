@@ -24,7 +24,6 @@ public class ClientHandler implements Runnable {
             String htmlContent = generateHtmlResponse();
             byte[] bodyBytes = htmlContent.getBytes(StandardCharsets.UTF_8);
 
-            // HTTP 1.1 protokolüne uygun başlıklar
             String httpResponse = "HTTP/1.1 200 OK\r\n" +
                     "Content-Type: text/html; charset=UTF-8\r\n" +
                     "Content-Length: " + bodyBytes.length + "\r\n" +
@@ -53,15 +52,15 @@ public class ClientHandler implements Runnable {
                 "    <meta charset=\"UTF-8\">\n" +
                 "    <title>Kişisel Sunucu</title>\n" +
                 "    <style>\n" +
-                "        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 40px; background-color: #f8f9fa; color: #212529; }\n" +
-                "        .card { max-width: 750px; background: #ffffff; padding: 35px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin: 0 auto; }\n" +
-                "        h1 { color: #1e293b; border-bottom: 3px solid #3b82f6; padding-bottom: 12px; margin-top: 0; }\n" +
-                "        h2 { color: #64748b; font-weight: 400; font-size: 1.25rem; margin-bottom: 24px; }\n" +
+                "        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 40px; background-color: #fff0f5; color: #4a4a4a; }\n" +
+                "        .card { max-width: 750px; background: #ffffff; padding: 35px; border-radius: 16px; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.15); margin: 0 auto; border: 1px solid #fbcfe8; }\n" +
+                "        h1 { color: #db2777; border-bottom: 3px solid #f472b6; padding-bottom: 12px; margin-top: 0; }\n" +
+                "        h2 { color: #9d174d; font-weight: 400; font-size: 1.25rem; margin-bottom: 24px; }\n" +
                 "        .section { margin-top: 24px; }\n" +
-                "        .section-title { font-weight: 600; color: #0f172a; margin-bottom: 8px; font-size: 1.1rem; }\n" +
-                "        p { line-height: 1.7; color: #334155; }\n" +
-                "        ul { line-height: 1.8; color: #334155; padding-left: 20px; }\n" +
-                "        .badge { background-color: #e0f2fe; color: #0369a1; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 6px; display: inline-block; margin-bottom: 8px; }\n" +
+                "        .section-title { font-weight: 600; color: #831843; margin-bottom: 8px; font-size: 1.1rem; }\n" +
+                "        p { line-height: 1.7; color: #475569; }\n" +
+                "        ul { line-height: 1.8; color: #475569; padding-left: 20px; }\n" +
+                "        .badge { background-color: #fce7f3; color: #be185d; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 6px; display: inline-block; margin-bottom: 8px; border: 1px solid #fbcfe8; }\n" +
                 "    </style>\n" +
                 "</head>\n" +
                 "<body>\n" +
